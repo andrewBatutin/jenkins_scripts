@@ -1,7 +1,7 @@
 #!/bin/bash   
 
 #download all profiles 
-ios profiles:download:all -u arturs.alehna@accenture.com -p Na8Kt3Bb
+ios profiles:download:all -u <email> -p  <pswrd>
 
 prov_file="./Hotstar__Development.mobileprovision"
 if [ -f "$prov_file" ]

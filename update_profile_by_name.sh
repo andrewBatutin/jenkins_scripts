@@ -29,7 +29,7 @@ shift $((OPTIND-1))
 
 
 #download all profiles
-ios profiles:download $prof_name  --type $prof_type  -u arturs.alehna@accenture.com -p Na8Kt3Bb
+ios profiles:download $prof_name  --type $prof_type  -u <email> -p <pwd> 
 
 prov_file="$prof_name.mobileprovision"
 if [ -f "$prov_file" ]
