@@ -1,16 +1,26 @@
 #!/bin/bash
 prof_name=""
 prof_type=""
+u_name=""
+pswrd=""
 
 OPTIND=1
 
-while getopts ":p:t:" opt; do
+while getopts ":p:t:u:w:" opt; do
   case $opt in
     p)
       prof_name=$OPTARG 
       ;;
     t)
       prof_type=$OPTARG
+      ;;
+    u)
+      u_name=$OPTARG
+      echo $u_name
+      ;;
+    w)
+      pswrd=$OPTARG
+      echo $pswrd
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -29,7 +39,7 @@ shift $((OPTIND-1))
 
 
 #download all profiles
-ios profiles:download $prof_name  --type $prof_type  -u <email> -p <pwd> 
+ios profiles:download $prof_name  --type $prof_type  -u $u_name -p $pswrd 
 
 prov_file="$prof_name.mobileprovision"
 if [ -f "$prov_file" ]
