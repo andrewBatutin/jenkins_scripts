@@ -16,11 +16,9 @@ while getopts ":p:t:u:w:" opt; do
       ;;
     u)
       u_name=$OPTARG
-      echo $u_name
       ;;
     w)
       pswrd=$OPTARG
-      echo $pswrd
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
